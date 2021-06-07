@@ -78,6 +78,13 @@ class ClientRegistrationInfo(OIDCData):
 
 class ClientMetadata(OIDCData):
     def __init__(self, client_id=None, client_secret=None, **kwargs):
+        """
+        Args:
+            client_id (str): client identifier representing the client
+            client_secret (str): client secret to authenticate the client with
+                the OP
+            kwargs (dict): key-value pairs
+        """
         super(ClientMetadata, self).__init__(client_id=client_id, client_secret=client_secret, **kwargs)
 
 
