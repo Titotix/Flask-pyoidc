@@ -48,6 +48,9 @@ provider):
 * [Access Token](http://openid.net/specs/openid-connect-core-1_0.html#TokenResponse)
 * [Userinfo Response](http://openid.net/specs/openid-connect-core-1_0.html#UserInfoResponse)
 
+On the side of this documentation, you may have a look on some 
+[code example](https://github.com/zamzterz/Flask-pyoidc/tree/master/example).
+
 ## Using multiple providers
 
 To allow users to login with multiple different providers, configure all of them in the `OIDCAuthentication`
