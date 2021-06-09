@@ -26,6 +26,22 @@ def index():
                    userinfo=user_session.userinfo)
 ```
 
+You can also use the Flask's application factory
+
+```
+config = ProviderConfiguration(...)
+auth = OIDCAuthentication({'default': config})
+
+def create_app():
+    app = Flask(__name__)
+    app.config.update(
+        OIDC_REDIRECT_URI = 'https://example.com/redirect_uri',
+        SECRET_KEY = ...
+    )
+    auth.init_app(app)
+    return app
+```
+
 After a successful login, this extension will place three things in the user session (if they are received from the
 provider):
 * [ID Token](http://openid.net/specs/openid-connect-core-1_0.html#IDToken)
